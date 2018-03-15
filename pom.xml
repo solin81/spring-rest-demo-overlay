@@ -55,7 +55,29 @@
                 </configuration>
             </plugin>
         </plugins>
-        <!--<finalName>spring-rest-demo-overlay</finalName>-->
+        <finalName>spring-rest-demo-overlay</finalName>
     </build>
+
+    <profiles>
+        <profile>
+            <id>development</id>
+            <!-- we'll add more stuff here... -->
+            <!--
+            <activation>
+                <jdk>1.8</jdk>
+            </activation>
+            -->
+            <build>
+                <finalName>spring-rest-demo-overlay-dev</finalName>
+            </build>
+        </profile>
+        <profile>
+            <id>production</id>
+            <!-- ...and here -->
+            <build>
+                <finalName>spring-rest-demo-overlay-prod</finalName>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
